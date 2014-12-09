@@ -53,33 +53,8 @@
             $scope.profilePic = authData.google.cachedUserProfile.picture;
             $scope.activeUserPic = authData.google.cachedUserProfile.picture;
 
-            $http({
-              url: 'https://api.imgur.com/3/image',
-              method: 'POST',
-              header: {
-                Authorization: 'Client-ID 92a47c218f82f09'
-              },
-              params: {
-                image: authData.google.cachedUserProfile.picture
-              }
-            })
-              .success(function(d, s, h, c) {
-                console.log(d);
-                console.log(s);
-                console.log(h);
-                console.log(c);
-              })
-              .error(function(d, s, h, c) {
-                console.log(d);
-                console.log(s);
-                console.log(h);
-                console.log(c);
-              });
-
             $scope.loggedIn = true;
             $scope.$apply();
-          }, {
-            remember: "sessionOnly"
           });
         }
     }])

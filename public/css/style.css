@@ -17,6 +17,10 @@ body {
     color: #fff;
 }
 
+.navbar-nav>li {
+    display: inline-block;
+}
+
 .navbar-default .navbar-brand {
     padding: 5px;
 }
@@ -26,9 +30,7 @@ body {
 }
 
 #search {
-    margin-top: 7px;
-    margin-left: 15px;
-    margin-bottom: 0;
+    display: none;
 }
 
 .glyphicon-th-list {
@@ -37,6 +39,10 @@ body {
     margin-left: 10px;
     font-size: 25px;
     text-shadow: #ddd 0 1px 0;
+}
+
+.glyphicon-home {
+    font-size: 20px;
 }
 
 .glyphicon-th-list:hover {
@@ -91,12 +97,11 @@ li.dropdown {
 }
 
 .profile-name {
-    color: #fff;
-    font-size: 18px;
+    display: none;
 }
 
 .caret {
-    color: #fff;
+    display: none;
 }
 
 .notification-img {
@@ -123,7 +128,7 @@ li.dropdown {
 }
 
 .main {
-    width: 66%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -177,7 +182,6 @@ li.dropdown {
     width: 40px;
     height: 40px;
     margin-top: 5px;
-
 }
 
 #additional-posts {
@@ -212,3 +216,62 @@ hr {
     width: 70%;
     margin: 300px auto;
 }
+
+.left-nav {
+    float: left;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.navbar-right {
+    float: right;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.navbar-header {
+    display: none;
+}
+
+.navbar-search {
+    display: block;
+    font-size: 20px;
+}
+
+
+@media screen and (min-width:768px){
+    .navbar-header {
+        display: inline-block;
+    }
+
+    #search {
+        display: inline-block;
+    }
+
+    .navbar-search {
+        display: none !important;
+    }
+
+    #search {
+        margin-top: 7px;
+        margin-left: 15px;
+        margin-bottom: 0;
+    }
+
+    .profile-name {
+        color: #fff;
+        font-size: 18px;
+        display: inline-block;
+    }
+
+    .caret {
+        color: #fff;
+        display: inline-block;
+    }
+
+    .main {
+        width: 66%;
+    }
+}
+
+
